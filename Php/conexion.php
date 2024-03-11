@@ -1,9 +1,9 @@
 <?php
 $host='localhost';
 $root='root';
-$contraseña='';
+$password='';
 $nombrebd='medpriority';
-$conn= new mysqli($host,$root,$contraseña,$nombrebd);
+$conn= new mysqli($host,$root,$password,$nombrebd);
 if(!$conn){
     die("No es posible conectar a la base de datos");
 }

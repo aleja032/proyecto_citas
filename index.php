@@ -1,9 +1,5 @@
 <?php
-session_start();
- if(isset($_SESSION['autenticado']) && $_SESSION['autenticado']){
-    echo "<script>console.log('ya inicio')</script>";
-
- }    
+session_start();    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -235,7 +231,7 @@ session_start();
     <div class="modal">
         <div class="container">
             <br>
-            <form action="./Php/validar_ingresar.php" class="form_sesion" method="post">
+            <form action="./Php/validar_ingresar1.php" class="form_sesion" method="post">
                 <div class="se_text">
                     <h2>Iniciar Sesión</h2> <i id="o_p"><i class="fa-solid fa-xmark" style="color: #050505;"></i></i>
                 </div>

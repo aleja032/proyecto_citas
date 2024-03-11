@@ -4,24 +4,28 @@ require_once('conexion.php');
 
 $correo= $_POST["correo"];
 
-$sql="SELECT * FROM usuario WHERE correo='$correo'";
+$sql="SELECT * FROM usuario INNER JOIN historia_clinica ON historia_clinica.id_usuario= usuario.id_usuario INNER JOIN patologias ON patologias.id_patologia= historia_clinica.id_patologia INNER JOIN embarazo ON embarazo.id_embarazo=historia_clinica.id_embarazo WHERE correo='$correo'";
 $consulta= mysqli_query($conn,$sql);
 
 if(mysqli_num_rows($consulta)>0){
     $datos= mysqli_fetch_array($consulta);
-   /* $nombreCompleto = $datos['nombre'];
 
+    $nombreCompleto = $datos['nombre'];
     $partesDelNombre = explode(' ', $nombreCompleto); // Divide la cadena en un array usando el espacio como delimitador
     $primerNombre = $partesDelNombre[0];     // Accede al primer elemento del array, que sería el primer nombre
-    $_SESSION['nombre'] = $primerNombre;*/
-    $_SESSION['nombre']= $datos['nombre'];
+    $_SESSION['nombre'] = $primerNombre;
+    $_SESSION['nombre_completo']= $nombreCompleto;
     $_SESSION['id']=$datos['id_usuario'];
     $_SESSION['edad']=$datos['edad'];
     $_SESSION['telefono']=$datos['telefono'];
     $_SESSION['tipo_documento']=$datos['tipo_documento'];
+    $_SESSION['tipo_afiliacion']=$datos['tipo_afiliacion'];
+    $_SESSION['patologia']=$datos['nombre_patologia'];
+    $_SESSION['estado']=$datos['estado'];
 
     $_SESSION['autenticado']=true;
-
+   // $_SESSION['id_patologia']=$datos[''];  INNER JOIN historia_clinica ON historio_clinica.id_usuario= usuario.id_usuario
+   
     echo "<script> window.location='../index.php'</script>";
 }else{
     echo "<script>console.log('error inicio')</script>";

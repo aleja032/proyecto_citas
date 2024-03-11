@@ -1,36 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-
+    font-family: "Adamina", serif;
+    font-style: normal;
 }
 
 body {
-    font-family: 'Adamina';
-    height: 95vh;
+    height: 99vh;
     display: flex;
-    font-size: 120%;
-   justify-content: center;
+    font-size: 110%;
 }
 /* contenedor principal a peticion de kevin */
 .todo{
-    width:100%;
-    height: 100%;
     display: flex;
+    width: 99%;
 }
 /* conttenedor que me contiene el menu  lateral izquierdo */
 .contenedor_menu {
-
-    height: 105%;
+    display: flex;
+    flex-direction: column;
     width: 20%;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    ;
-  
 }
 
 /* contenedor dentro del menu que contiene la imagen del logo y el nombre del proyecto */
 .con_menu1 {
 
-    height: 10%;
+    height: 16%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -39,10 +37,10 @@ body {
 
 /* contenedor  del logo */
 .logoimagen {
-    width: 20%;
-    height: 80%;
+    width: 19%;
+    height: 43%;
     justify-content: center;
-    background-image: url(imagenes/logo.jpeg);
+    background-image: url(../Img/logo.jpeg);
     background-size: 100% 100%;
 }
 /* contenedor que tiene el nombre del proyecto*/
@@ -51,12 +49,11 @@ body {
     height: 100%;
     display: contents;
     align-items: center;
-    font-size: 90%;
 }
 /*estilos proporcionados al nombre del proyecto */
 .logoletrass P {
     width: 60%;
-    font-size: 120%;
+    font-size: 115%;
     font-weight: bold;
     background: linear-gradient(to right, #006400, #8FBC8F);
     -webkit-background-clip: text;
@@ -67,9 +64,8 @@ body {
 
 /* estilos del  agendar citas  titulo*/
 p {
-    font-family:'Adamina' ;
-    color: #1BC100;
-    font-size: 130%;
+    color: #23DA06;
+    font-size: 140%;
 }
 /* contenedor principal que contiene los contenedores del menu*/
 .con_internos1 {
@@ -82,11 +78,14 @@ p {
 .opciones_menu a {
     text-decoration: none;
     color: black;
+    font-size: 110%;
 }
 /*este le da estilos al menu que no tiene el mismo nombre en la clase*/
 .opciones_menup a {
     text-decoration: none;
     color: black;
+    font-size: 110%;
+
   /
 
 }
@@ -120,7 +119,6 @@ p {
     display: flex;
     justify-content: center;
     display: block;
-
 }
 .responcilagendar{
     display: none;
@@ -131,7 +129,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #1BC100;
+    border-bottom: 2px solid #1BC100;
     height: 10%;
 }
 
@@ -141,47 +139,48 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #1BC100;
+    border-bottom: 2px solid #1BC100;
     margin-bottom: 10px;
     height: 10%;
     background-color: #1BC100;
 }
+/*div principal de cerrar secion*/
+.con_internos2 {
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
 /*cerrar secion*/
 .opciones_menud {
-    font-size: 80%;
-    width: 40%;
-    font-family:'Adamina' ;
-
+    font-size: 100%;
+    width:42%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.opciones_menud i{
+    font-size: 120%;
 }
 /*  contenedor de imagen de el icono usuaario */
 .opciones_menudimagen {
-    background-image: url(imagenes/usuario.png);/* imagen de icono de  usuario*/
-    width: 15%;
+    background-image: url(../Img/power_off.png);/* imagen de icono de  usuario*/
+    width: 10%;
     height: 50%;
     background-size: 100% 100%;
 }
 
-/*div principal de cerrar secion*/
-.con_internos2 {
-    height: 8%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
+
 
 /*contenedor principal del formulario */
 .contenedor_formulario {
-    height: 78%;
     width: 80%;
 }
 
 /* contendor del icono usuario agendar cita y raya*/
 .cont_formulario1 {
-    height: 20%;
-    display: flex;
-    display: block;
+    height: 16%;
 }
 
 /* contenedor de agendar cita e icono de usuario*/
@@ -193,40 +192,42 @@ p {
 }
 /* estilos a la linea separadora debajo de el agendar cita */
 .linea {
-    width: 80%;
+    width: 85%;
     display: flex;
     justify-content: center;
 }
 
 /* contenedor de agendar cita*/
 .cont_formulario1_1 {
-    height: 90%;
     width: 40%;
     display: flex;
     justify-content: center;
-    align-items: center;
     align-items: end;
+
 }
 /* contenedor del icono de usuario al lado de agendar cita*/
 .cont_formulario1_2 {
-    background-size: 100% 100%;
-    height: 100%;
-    width: 10%;
+    height: 122%;
+    width: 12%;
+    display: flex;
+    align-items: end;
+}
+.cont_formulario1_2  i{
+    height: 85%;
+    width: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(imagenes/usuario.png);
+    background-image: url(../Img/user1.png);
+    background-size: calc(100%)calc(100%);
 }
-
 /*contenedor debajo de  el formulario*/
 
 .con_formulario3 {
-
-    height: 45%;
+    height:39%;
     width: 100%;
     display: flex;
-    display: block;
-
+    flex-direction: column;
 }
 
 .opcion {
@@ -239,22 +240,19 @@ p {
 }
 
 .con_formulario_final2 {
-
-    height: 80%;
-    width: 100%;
     display: flex;
-    
+    height: 100%;
 }
 
 .mensaje2{
     display: none;
 }
 /*estilos para el select tipo de cita */
+
 select {
     font-size: 16px;
     padding: 8px;  
     width: 100%;
-
 }
 
 .opcion {
@@ -267,23 +265,30 @@ select {
 }
 
 .con_final1 {
-
     width: 80%;
-    height: 50%;
     justify-content: center;
     align-items: center;
-    display: inline-block;
-
-
+    display: inline-block;  
+}
+.final2 button.submit-btn {
+    background-color: #1BC100;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
 .mensaje {
     display: flex;
     width: 100%;
-    height: 100%;
     align-items: center;
     align-items: flex-end;
-
     justify-content: center;
 
 }
@@ -298,34 +303,14 @@ h2 {
 
 
 .con_final2 {
-    background-image: url(imagenes/medica.png);
-    width: calc(10%);
-    height: calc(10%);
-    margin-top: 3%;
-   margin-right: 10%;
+    background-image: url(../Img/medica.png);
+    background-size: calc(100%)calc(100%);
     height: 100%;  
     background-size: contain;
-    width:17%;
-    
-   
+    width:17%;   
    
 }
 
-.final2 button.submit-btn {
-    background-color: #1BC100;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-    width: 30%;
-    height: 90%;
-}
 
 
 
@@ -333,11 +318,6 @@ h2 {
     width: 95%;
        display: flex;
     justify-content: center;
-}
-
-.separacion {
-    width: 100%;
-    height: 10%;
 }
 
 hr {
@@ -369,10 +349,7 @@ hr {
 /*estilos al formulario*/
 .cont_formulario2 {
     width: 100%;
-    height: 50%;
-    display: flex;
-    display: block;
-  
+    height: 45%;
 }
 
 .preguntasformulario1 {
@@ -389,42 +366,40 @@ hr {
 }
 
 .preguntasformulario2 {
-    width: 90%;
+    width: 100%;
     height: 20%;
     display: flex;
-    justify-content: space-around;
 }
 
 .pregunt_2 {
     height: 100%;
-    width: 30%;
+    width: 80%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-
 }
 
 .preguntasformulario3 {
-    width: 90%;
-    height: 20%;
-
+    width: 100%;
+    height: 22%;
     display: flex;
     justify-content: space-around;
-
 }
 
 .pregunt_3 {
     height: 100%;
-    width: 30%;
+    width: 80%;
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 
 
 }
 
 .preguntasformulario4 {
-    width: 90%;
+    width: 100%;
     height: 20%;
     display: flex;
    justify-content: space-around;
@@ -433,25 +408,20 @@ hr {
 
 .pregunt_4 {
     height: 100%;
-    width: 30%;
+    width: 80%;
     align-items: center;
     display: flex;
+    flex-direction: column;
 justify-content: space-around;
   
 }
 
-.tipos {
-    width: 80%;
-}
-
-
 .tiposs {
     border: 1px solid #EEEEEE;
     background-color: #F7F7F7;
-    width: 120%;
     height: 100%;
+    width: 100%;
     border-radius: 5px;
-
 }
 
 
@@ -473,7 +443,7 @@ justify-content: space-around;
     background-size: 100% 100%;
     border: none;
     border-radius: 100px;
-    background-image: url(imagenes/imagebotton.png);
+    background-image: url(../Img/plus.png);
 
 }
 
@@ -481,9 +451,7 @@ justify-content: space-around;
 
 .r3 {
     height: 45%;
-    width: 40%;
-
-
+    width: 70%;
 }
 
 .pregunt_5 {
@@ -544,8 +512,7 @@ justify-content: space-around;
 
 .con_final {
     width: 16%;
-    height: 70%;
-   
+    height: 85%;
 }
 
 .separacionbotton {
@@ -582,17 +549,6 @@ select {
 
 
 }
- /* Estilos generales para mejorar la responsividad */
- * {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Adamina', sans-serif;
-}
-
 /* Estilos para el menú y la navegación */
 .mostrarmenu{
     font-size: 30px;
