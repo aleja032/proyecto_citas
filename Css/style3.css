@@ -23,7 +23,7 @@ header{
     display: flex;
     flex-direction: column;
 }
-header nav{
+nav{
     height: 15%;
     display: flex;
 }
@@ -54,6 +54,19 @@ header nav{
     display: inline;
     text-align: center;
     letter-spacing: 0.5px;
+}
+#check {
+    display: none;
+}
+
+label {
+    display: none;
+    font-size: 25px;
+    float: right;
+}
+
+label:hover {
+    cursor: pointer;
 }
 .opciones{
     width: 50%;
@@ -737,7 +750,7 @@ hr{
     width: 15%;
     height: 15%;
     background-color:#23DA06;
-    border-radius: 5px;
+    border-radius: 5px; 
     outline: none;
     border: none;
 }
@@ -745,27 +758,70 @@ hr{
 @media screen and (max-width:436px){
 
     /* Todo el header */
-
+    header nav{
+        top: 0;
+        position: sticky;
+        
+        z-index: 10;
+        background: white;
+    }
     .cont-logo_name{
-        width: 60%;
+        width: 70%;
     }
     .logo{
         width: 100%;
-        justify-content: space-around;
     }
     .logo>i{
-        width: 25%;
+        width: 20%;
+        height: 64%;
     }
     .logo>p{
-        width: 65%;
+        width: 72%;
     }
 
+    label {
+        display: flex;
+        width: 25%;
+        height: 100%;
+        justify-content: end;
+        align-items: center;
+        font-size: 170%;
+    }
+    label i{
+        font-size: 130%;
+    }
     .opciones{
-        opacity: 0;
-        width: 30%;
+        position: absolute;
+        flex-direction: column;
+        justify-content: start;
+        align-items: end;
+        background-color: #E7EAEB;
+        visibility: hidden;
         display: none;
+        z-index: 1;
+        height: 100%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 29px 0px;
     }
-
+    .opcion1{
+        width: 100%;
+        height: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #close{
+        height: 10%;
+        width: 25%;
+        display: flex;
+        justify-content: left;
+        font-size: 180%;
+    }
+    #check:checked ~ .opciones {
+        visibility: visible;
+        display: flex;
+        right: 0;
+        }
+    
     .container_verde{
         flex-direction: column-reverse;
         justify-content: center;
@@ -778,12 +834,25 @@ hr{
         justify-content: space-between;
         align-items: center;
     }
+    .opciones .sesion{
+        height: fit-content;
+        width: 100%;
+        height: 8%;
 
+    }
+    #cerrarsesion{
+        top: 18rem;
+        left: 14rem;
+        right: 15rem;
+        height: 15%;
+        width: 40%;
+        z-index: 2;
+    }
     /* Sobre nuestros profesionales */
     .box{
         height: 40%;
     }
-
+    
     /**/
 
     /*Sliders*/

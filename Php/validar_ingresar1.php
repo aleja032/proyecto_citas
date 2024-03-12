@@ -4,9 +4,11 @@ require_once('conexion.php');
 
 $correo= $_POST["correo"];
 
-$sql="SELECT * FROM usuario INNER JOIN historia_clinica ON historia_clinica.id_usuario= usuario.id_usuario INNER JOIN patologias ON patologias.id_patologia= historia_clinica.id_patologia INNER JOIN embarazo ON embarazo.id_embarazo=historia_clinica.id_embarazo WHERE correo='$correo'";
+$sql="SELECT * FROM usuario INNER JOIN historia_clinica ON historia_clinica.id_usuario= usuario.id_usuario INNER JOIN patologias ON patologias.id_patologia= historia_clinica.id_patologia INNER JOIN embarazo ON embarazo.id_embarazo=historia_clinica.id_embarazo WHERE correo='$correo' AND id_rol=2";
 $consulta= mysqli_query($conn,$sql);
 
+$validacion_doc="SELECT * FROM usuario WHERE id_rol=3";
+$consulta2= mysqli_query($conn,$validacion_doc);
 if(mysqli_num_rows($consulta)>0){
     $datos= mysqli_fetch_array($consulta);
 
@@ -28,9 +30,12 @@ if(mysqli_num_rows($consulta)>0){
    
     echo "<script> window.location='../index.php'</script>";
 }else{
-    echo "<script>console.log('error inicio')</script>";
-
-    echo "<script> window.location='../index.php'</script>";
+    if(mysqli_num_rows($consulta2)>0){
+        echo "<script> window.location='./admin.html'</script>";
+    }else{
+        echo "<script>console.log('error inicio')</script>";
+        echo "<script> window.location='../index.php'</script>";
+    }
 }
 
 ?>

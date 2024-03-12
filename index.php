@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/style2.css">
+    <link rel="stylesheet" href="Css/style3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Libreria de awesone-->
@@ -23,20 +23,32 @@ session_start();
                     <p class="nombre">MEDPRIORITY</p>
                 </div>
             </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="check-boton">
+                <i class="fa-solid fa-bars" style="color: #010101;" id="menu"></i>
+            </label>
+
             <div class="opciones">
+               <label for="check" class="check-boton" id="close">
+                    <i class="fa-solid fa-xmark" style="color: #0a0a0a;"></i>
+                </label>
+            <a href="#somos" class="opcion1">Quienes Somos</a>
+            <a href="#section_1" class="opcion1">Servicios</a>
+             
                 <?php if(isset ($_SESSION['autenticado']) && $_SESSION['autenticado']==true):?>
+
+                    <a href="./Php/citas.php" class="opcion1">Agendar Cita</a>
                     <a href="#" class="sesion" id="user"><?php echo htmlspecialchars($_SESSION['nombre']) ?></a> <!--Boton de sesion-->
                     <a href="#" class="sesion" id="sesion1" style="display:none">Iniciar Sesión</a> <!--Boton de sesion-->
-                    <a href="./Php/citas.php" class="opcion1">Agendar Cita</a>
 
                     <?php else: ?>
-                    <a href="#" class="sesion" id="sesion1">Iniciar Sesión</a> <!--Boton de sesion-->
                     <a href="#" class="opcion1" id="cita">Agendar Cita</a>
+                    <a href="#" class="sesion" id="sesion1">Iniciar Sesión</a> <!--Boton de sesion-->
+                   
                <?php endif; ?>
             
                 
-                <a href="#section_1" class="opcion1">Servicios</a>
-                <a href="#somos" class="opcion1">Quienes Somos</a>
+                
             </div>
         </nav>
         <div class="container_verde">
